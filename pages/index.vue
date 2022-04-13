@@ -45,8 +45,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+      <QButton type="submit" variant="primary">Submit!</QButton>
+      <QButton type="reset" variant="danger">Reset!</QButton>
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
@@ -55,8 +55,11 @@
 </template>
 
 <script>
+  import QButton from "@/components/QButton/index.vue"
+
   export default {
     name: 'IndexPage',
+    components: { QButton },
     data() {
       return {
         form: {
