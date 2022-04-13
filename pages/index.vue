@@ -45,8 +45,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <QButton type="submit" variant="primary">Submit!</QButton>
-      <QButton type="reset" variant="danger">Reset!</QButton>
+      <QButton type="submit" variant="primary">Submit</QButton>
+      <QButton type="reset" variant="danger">Reset</QButton>
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
