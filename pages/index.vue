@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-3">
     <b-form @submit="onSubmit" @reset="onReset">
       <b-form-group
         id="input-group-1"
