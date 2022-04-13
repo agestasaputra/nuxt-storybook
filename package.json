@@ -6,7 +6,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "bootstrap": "^4.6.1",
@@ -19,7 +21,14 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@storybook/addon-actions": "^6.4.21",
+    "@storybook/addon-essentials": "^6.4.21",
+    "@storybook/addon-links": "^6.4.21",
+    "@storybook/vue": "^6.4.21",
+    "babel-loader": "^8.2.4",
     "sass": "^1.50.0",
-    "sass-loader": "10.1.1"
+    "sass-loader": "10.1.1",
+    "vue-loader": "^15.9.8"
   }
 }
