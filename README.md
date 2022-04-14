@@ -10,5 +10,5 @@ How to run this project:
 3. Yarn storybook or npm run storybook (to start storybook)
 
 ## Live Demo
-Project: https://agesta-nuxt-storybook.netlify.app/
-Storybook: https://agesta-nuxt-storybook-ui.netlify.app/
+- Project: https://agesta-nuxt-storybook.netlify.app/
+- Storybook: https://agesta-nuxt-storybook-ui.netlify.app/
