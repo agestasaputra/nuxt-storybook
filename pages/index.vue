@@ -45,12 +45,47 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <QButton type="submit" variant="primary">Submit</QButton>
+      <QButton type="submit" variant="primary" :is-loading="form.isLoading">Submit</QButton>
       <QButton type="reset" variant="danger">Reset</QButton>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
+    <b-card class="my-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
     </b-card>
+    <QButton 
+      type="button"
+      variant="success"
+      @click="onShowModal"
+    >
+      Show Modal
+    </QButton>
+
+    <QModal 
+      v-model="modal"
+      body-class="pb-0"
+      footer-class="border-0"
+    >
+      <template #header>
+        <section class="w-100 d-flex">
+          Ini Header
+        </section>
+      </template>
+      <template #body>
+        <section class="w-100 text-center">
+          <b-icon icon="exclamation-circle" variant="danger" font-scale="6" class="mb-3"></b-icon>
+          <p><strong>Error!</strong></p>
+        </section>
+      </template>
+      <template #footer>
+        <section class="w-100 d-flex justify-content-center">
+          <QButton
+            variant="primary"
+            @click="onCloseModal"
+          >
+            <strong>Close</strong>
+          </QButton>
+        </section>
+      </template>
+    </QModal>
   </div>
 </template>
 
@@ -62,6 +97,7 @@
     components: { QButton },
     data() {
       return {
+        modal: false,
         form: {
           email: '',
           name: '',
@@ -74,6 +110,12 @@
       }
     },
     methods: {
+      onShowModal() {
+        this.modal = true
+      },
+      onCloseModal() {
+        this.modal = false
+      },
       onSubmit(event) {
         if (event) event.preventDefault()
         this.form.isLoading = true
